@@ -1,0 +1,160 @@
+
+/* =========================================
+   SpendSense AI — Global Design System
+   ========================================= */
+
+:root {
+    --ss-primary: #2563eb;
+    --ss-primary-dark: #1d4ed8;
+    --ss-background: #f5f7fb;
+    --ss-surface: #ffffff;
+    --ss-text: #172033;
+    --ss-muted: #64748b;
+    --ss-border: #e5eaf2;
+}
+
+/* Main application background */
+.stApp {
+    background: var(--ss-background);
+    color: var(--ss-text);
+}
+
+/* Main content spacing */
+.block-container {
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    max-width: 1500px;
+}
+
+/* Headings */
+h1 {
+    color: var(--ss-text);
+    font-weight: 800 !important;
+    letter-spacing: -0.8px;
+}
+
+h2, h3 {
+    color: var(--ss-text);
+    font-weight: 700 !important;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: #101b33;
+    border-right: 1px solid #26334d;
+}
+
+section[data-testid="stSidebar"] * {
+    color: #f8fafc;
+}
+
+section[data-testid="stSidebar"] hr {
+    border-color: #334155;
+}
+
+/* Sidebar captions */
+section[data-testid="stSidebar"] [data-testid="stCaptionContainer"] {
+    color: #b8c6dc;
+}
+
+/* KPI metric cards */
+div[data-testid="stMetric"] {
+    background: var(--ss-surface);
+    border: 1px solid var(--ss-border);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+div[data-testid="stMetric"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+}
+
+div[data-testid="stMetricLabel"] {
+    color: var(--ss-muted);
+    font-weight: 600;
+}
+
+div[data-testid="stMetricValue"] {
+    color: var(--ss-text);
+    font-weight: 800;
+}
+
+/* Buttons */
+.stButton > button,
+.stDownloadButton > button {
+    border-radius: 10px;
+    font-weight: 600;
+    min-height: 42px;
+    transition: all 0.2s ease;
+}
+
+.stButton > button[kind="primary"] {
+    background: var(--ss-primary);
+    border-color: var(--ss-primary);
+    color: white;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+    border-color: var(--ss-primary);
+    color: var(--ss-primary);
+}
+
+/* Form controls */
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input,
+.stSelectbox div[data-baseweb="select"],
+.stMultiSelect div[data-baseweb="select"] {
+    border-radius: 10px;
+}
+
+/* Data tables */
+div[data-testid="stDataFrame"] {
+    border: 1px solid var(--ss-border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Chart containers */
+div[data-testid="stPlotlyChart"] {
+    background: var(--ss-surface);
+    border: 1px solid var(--ss-border);
+    border-radius: 14px;
+    padding: 10px 8px 0;
+}
+
+/* Dividers */
+hr {
+    border-color: var(--ss-border);
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Alerts and information messages */
+div[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+/* Download controls */
+.stDownloadButton > button {
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem !important;
+    }
+
+    div[data-testid="stMetric"] {
+        padding: 12px;
+    }
+}

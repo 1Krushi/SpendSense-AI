@@ -1,0 +1,24 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Next.js / build artifacts (if present)
+.next/
+
+# IDE and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Generated files
+*.log
